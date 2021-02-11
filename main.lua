@@ -32,7 +32,7 @@ for str in string.gmatch(code,"([^\n]+)") do
     var[tokens[2]] = tokens[3]
   end
   if tokens[1] == "@IF.START" then
-    nil
+    print("")
   end
   if tokens[1] == "@IF.END" then
     if extlib.evaluate(var["if"]) then
