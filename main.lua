@@ -1,6 +1,5 @@
 io = require("io")
 extlib = require("extlib")
-iflib = require("iflib")
 file = io.open("data.communication", "r")
 io.input(file)
 filecont = io.read()
@@ -36,7 +35,7 @@ for str in string.gmatch(code,"([^\n]+)") do
     nil
   end
   if tokens[1] == "@IF.END" then
-    if iflib.evaluate(var["if"]) then
+    if extlib.evaluate(var["if"]) then
       nil
     end
   end
