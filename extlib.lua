@@ -10,3 +10,8 @@ function check(token,var)
     return text
   end
 end
+function evaluate(code)
+  func = loadstring("return " .. code)
+  data = func()
+  return data
+end
