@@ -9,9 +9,12 @@ int main (int argc, char *argv[]) {
    fp = fopen("data.communication", "w");
    fprintf(fp, argv[1]);
    fclose(fp);
-   strcpy(command, "python3");
-   system(command);
-   strcpy(command, "lua");
-   system(command);
+   if (argv[2] == "--ide"){
+       strcpy(command, "python3 main.py");
+       system(command);
+   } else {
+       strcpy(command, "lua main.py");
+       system(command);
+   }
    return(0);
 } 
