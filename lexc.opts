@@ -1,9 +1,0 @@
-OUT.VAR~ 
-OUT.PRINT~* print(
-: .
-~* (
-* )
-#  
-! import~
-ui tkinter
-window Tk
